@@ -149,6 +149,10 @@ class HWAddress:
         """Get the raw integer value of this hardware address."""
         return self._address
 
+    def __add__(self, num):
+        self._address += num
+        return self
+
     def __eq__(self, other):
         """Check if this hardware address is equal to another.
 
