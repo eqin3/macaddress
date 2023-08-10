@@ -130,7 +130,7 @@ class HWAddress:
         result = []
         offset = (4 - type(self).size) & 3
         unconsumed_address_value = int(self) << offset
-        for character in reversed(formats[0]):
+        for character in reversed(formats[1]):
             if character == 'x':
                 nibble = unconsumed_address_value & 0xf
                 result.append(_HEX_DIGITS[nibble])
